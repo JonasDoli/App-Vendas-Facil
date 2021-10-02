@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#AA00FF"
+
+    tools:context=".MainActivity"
+
+
+   >
+
+    <LinearLayout
+        android:id="@+id/gavetaretratil"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvNvagas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="00" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="204dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:fontFamily="casual"
+            android:text="Vendas"
+
+
+            android:textColor="#ffff"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.Toolbar
+
+            android:id="@+id/toolBar"
+            android:layout_width="358dp"
+
+            android:layout_height="0dp"
+            android:background="#707070"
+            android:backgroundTint="#042196F3"
+            android:elevation="4dp"
+            app:titleTextColor="#FFFFFF" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+
+            android:background="@drawable/gradiente_fundo"
+            android:padding="0dp">
+
+            <EditText
+                android:id="@+id/etBuscar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:backgroundTint="#673AB7"
+                android:hint="Pesquisar"
+
+                android:inputType="textAutoComplete"
+                android:textColor="#0D00B0FF"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#6200EA"
+
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/ivBuscar"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:outlineSpotShadowColor="@color/cardview_dark_background"
+                android:src="@android:drawable/ic_search_category_default"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/retratil"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradiente_fundo" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_margin="16dp"
+                android:src="@android:drawable/ic_input_add"
+                android:tint="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="):"
+                android:textSize="200sp"
+                android:visibility="gone" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</FrameLayout>

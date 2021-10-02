@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:forceDarkAllowed="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradiente_fundo"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:layout_marginLeft="16dp"
+            android:text="Pedido" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_salvar"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                      android:textStyle="bold"
+                    android:text="Cliente"
+                    android:fontFamily="casual"
+
+                    android:textColor="#3F51B5"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/etNome"
+
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#673AB7"
+
+                    android:gravity="center"
+
+                    android:hint="Modelo"
+                    android:inputType="textCapCharacters"
+
+                    android:textAllCaps="true"
+                    android:textColor="#673AB7" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edit_salvar"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="Dia"
+                    android:fontFamily="casual"
+                    android:textStyle="bold"
+                    android:textColor="#673AB7"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/etData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#673AB7"
+                    android:gravity="center"
+                    android:inputType="text"
+                     android:text=""
+                    android:onClick="cptData"
+
+
+                    android:textAllCaps="true"
+                    android:textColor="#673AB7" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edit_salvar"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:fontFamily="casual"
+                    android:text="Hora"
+                    android:textColor="#673AB7"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etHora"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#673AB7"
+                    android:text=""
+
+                    android:gravity="center"
+
+
+
+                    android:inputType="time"
+
+
+                    android:textAllCaps="true"
+                    android:textColor="#673AB7" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSalvarConato"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/botao_persona"
+                android:shadowColor="@color/cardview_dark_background"
+                android:text="Salvar "
+                android:fontFamily="casual"
+                android:textStyle="bold"
+                android:textColor="#ffff" />
+
+            <Button
+                android:id="@+id/btnExcluirContato"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/botao_persona"
+                android:onClick="onClickExcluirContato"
+                android:outlineAmbientShadowColor="@color/cardview_dark_background"
+                android:shadowColor="@color/cardview_dark_background"
+                android:text="Excluir"
+                android:textStyle="bold"
+                android:fontFamily="casual"
+                android:textColor="#ffff" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+</FrameLayout>

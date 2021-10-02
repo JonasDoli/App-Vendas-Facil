@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:padding="0dp"
+    android:layout_marginLeft="1dp"
+    android:layout_marginRight="1dp"
+
+    android:background="?attr/actionBarDivider"
+
+    android:id="@+id/llItem"
+
+    >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="1dp"
+        android:background="@drawable/edit_salvar"
+        android:orientation="vertical"
+        android:outlineAmbientShadowColor="#000"
+        android:padding="0dp">
+
+        <ImageView
+            android:id="@+id/ivFotoIten"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_baseline_image_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvNomeCliente"
+            android:layout_width="148dp"
+            android:layout_height="18dp"
+
+            android:layout_marginStart="16dp"
+
+            android:layout_marginTop="12dp"
+            android:fontFamily="monospace"
+            android:text="Bone Aba Reta"
+            android:textColor="#181D1E"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/ivFotoIten"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvEndereço"
+            android:layout_width="41dp"
+            android:layout_height="11dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="monospace"
+            android:text="Disponivel "
+            android:textColor="#7E7F84"
+            android:textSize="8sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/ivFotoIten"
+            app:layout_constraintTop_toBottomOf="@+id/tvNomeCliente" />
+
+        <TextView
+            android:id="@+id/tvEndereço02"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="monospace"
+            android:text="20
+"
+            android:textColor="#262C2D"
+
+            android:textSize="8dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/tvEndereço"
+            app:layout_constraintTop_toBottomOf="@+id/tvNomeCliente" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="14dp"
+            android:layout_height="10dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="monospace"
+            android:text="R$"
+            android:textColor="#565855"
+            android:textSize="8sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/ivFotoIten"
+            app:layout_constraintTop_toBottomOf="@+id/tvEndereço" />
+
+        <TextView
+            android:id="@+id/tvHora"
+            android:layout_width="64dp"
+            android:layout_height="11dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="monospace"
+            android:paddingHorizontal="15dp"
+            android:text="150,00
+"
+            android:textColor="#181A17"
+            android:textSize="8dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/tvEndereço02" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="392dp"
+            android:layout_height="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:srcCompat="@drawable/separador"
+
+            tools:layout_editor_absoluteX="-2dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
