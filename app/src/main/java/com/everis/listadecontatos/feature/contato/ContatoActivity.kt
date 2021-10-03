@@ -26,22 +26,6 @@ class ContatoActivity : BaseActivity(), DatePickerDialog.OnDateSetListener {
     private var idContato: Int = -1
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_contato)
@@ -80,19 +64,12 @@ class ContatoActivity : BaseActivity(), DatePickerDialog.OnDateSetListener {
 
     private fun onClickSalvarContato() {
         val builder = AlertDialog.Builder(this)
-        if (etNome.text.isEmpty()) {
-            builder.setTitle("ATENÇÃO")
-            builder.setMessage("Voçê tem que preencher os campos")
-            builder.show()
-        }
-
-        if (etData.text.isEmpty()) {
+        if (etNome.text.isEmpty() || etData.text.isEmpty()) {
             builder.setTitle("ATENÇÃO")
             builder.setMessage("Voçê tem que preencher os campos")
             builder.show()
         } else {
             val nome = etNome.text.toString()
-
 
 
             val hora = etHora.text.toString()
@@ -137,7 +114,6 @@ class ContatoActivity : BaseActivity(), DatePickerDialog.OnDateSetListener {
     }
 
 
-
     var mSimpleDate = SimpleDateFormat("dd/MM/yyyy")
     fun cptData(view: android.view.View) {
         DatePickerDialog(this, this, 2021, 1, 1).show()
@@ -155,6 +131,9 @@ class ContatoActivity : BaseActivity(), DatePickerDialog.OnDateSetListener {
     }
 
 
+}
+
+private fun AlertDialog.Builder.setPositiveButton(s: String) {
 
 }
 
